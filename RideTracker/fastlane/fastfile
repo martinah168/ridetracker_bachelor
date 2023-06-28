@@ -1,0 +1,230 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+APPID = "de.tum.in.www1.health.enterprise.RideTracker"
+WATCHKITID = "de.tum.in.www1.health.enterprise.RideTracker.watchkitapp"
+WATCHKITEXTID = "de.tum.in.www1.health.enterprise.RideTracker.watchkitapp.watchkitextension"
+
+default_platform(:ios)
+
+platform :ios do
+
+    desc "[local] Build only"
+    lane :build do
+
+        # Resolve the Swift Package Manager dependencies
+        xcodebuild(
+                build: false,
+                xcargs: "-resolvePackageDependencies",
+        )
+
+        # Build the application without tests
+        xcodebuild(
+                configuration: "Debug",
+                clean: true,
+                build: true,
+                build_settings: {
+                    "CODE_SIGNING_ALLOWED" => "NO",
+                    "CODE_SIGNING_REQUIRED" => "NO",
+                    "CODE_SIGN_IDENTITY" => "",
+                    "CODE_SIGN_ENTITLEMENTS" => "",
+                }
+        )
+    end
+
+    desc "[local] Run Unit and UI Tests"
+    lane :test do
+
+        # Run UI and Unit Tests
+        scan(
+                clean: true, 
+        )
+    end
+
+    desc "[ci] Default bamboo configuration"
+    lane :bamboo do
+
+        ##########################################
+        # Environment Setup
+        ##########################################
+
+        # Unlock the agent keychain to gain access to the necessary certificates
+        unlock_keychain(
+                path: ENV['bamboo_KeyChain'],
+                password: ENV['bamboo_KeyChainPassword'],
+        )
+
+        # Setup Fastlane Variables
+        ENV['FASTLANE_PASSWORD'] = ENV['bamboo_FASTLANE_PASSWORD'] # Necessary for Developer Protal login
+        ENV['FASTLANE_SESSION'] = ENV['bamboo_FASTLANE_SESSION_PASSWORD'] # Necessary for 2FA
+        
+
+        ##########################################
+        # Prototyper Setup  
+        ##########################################
+
+        # Location of the info.plist in the folder structure
+        INFO_PLIST = sh("find ../RideTracker/ -name Info.plist -type f -not -path */Pods/* -not -path *Test* | head -n 1 | cut -c 2-").strip 
+	INFO_PLIST_CHARGING = sh("find ../WatchRideTracker/ -name Info.plist -type f -not -path */Pods/* -not -path *Test* | head -n 1 | cut -c 2-").strip
+	INFO_PLIST_CHARGINGEXT = sh("find '../WatchRideTracker Extension/' -name Info.plist -type f -not -path */Pods/* -not -path *Test* | head -n 1 | cut -c 2-").strip
+
+        # Prototyper Buildstring to identify releases
+        ENV['PROTOTYPER_BUILDSTRING'] = sh("date", "+%y%m%d_%H%M").rstrip + "-build" + (ENV['bamboo_buildNumber'] ||= "") + "-" + (ENV['bamboo_repository_branch_name'] ||= "")
+
+        puts "#############################################"
+        puts INFO_PLIST
+        puts ENV['PROTOTYPER_BUILDSTRING']
+        puts "#############################################"
+
+        # Write Prototyper BuildString to Info.plist
+        set_info_plist_value(
+                path: INFO_PLIST,
+                key: "CFBundleVersion",
+                value: "$(PROTOTYPER_BUILDSTRING)"
+        )
+        # Do this for WatchApp
+        set_info_plist_value(
+                path: INFO_PLIST_CHARGING,
+                key: "CFBundleVersion",
+                value: "$(PROTOTYPER_BUILDSTRING)"
+        )
+        # And for WatchApp Extension as well
+        set_info_plist_value(
+                path: INFO_PLIST_CHARGINGEXT,
+                key: "CFBundleVersion",
+                value: "$(PROTOTYPER_BUILDSTRING)"
+        )
+	
+        # Create BuildString file as Artifact
+        sh "echo $PROTOTYPER_BUILDSTRING > BuildString.txt"
+        sh "mv BuildString.txt ../"
+        
+        # Update AppID for enterprise team
+        update_app_identifier(
+		app_identifier: APPID,
+                plist_path: INFO_PLIST
+        )
+
+        update_app_identifier(
+		app_identifier: WATCHKITID,
+                plist_path: INFO_PLIST_CHARGING
+        )
+
+        update_app_identifier(
+		app_identifier: WATCHKITEXTID,
+                plist_path: INFO_PLIST_CHARGINGEXT
+        )
+
+        # Inspiration from this webpage http://carsonsand.com/jfinn/jitsi_corner2/commit/5ed53dcef5ed50b63ea12a73ead57cd55979289e
+        update_info_plist(
+                plist_path: INFO_PLIST_CHARGING,
+                block: proc do |plist|
+                        plist["WKCompanionAppBundleIdentifier"] = APPID
+                end
+        )
+
+        update_info_plist(
+                plist_path: INFO_PLIST_CHARGINGEXT,
+                block: proc do |plist|
+                        plist["NSExtension"]["NSExtensionAttributes"]["WKAppBundleIdentifier"] = WATCHKITID
+                end
+        )
+
+        update_code_signing_settings(
+                use_automatic_signing: false
+        )
+
+
+        ##########################################
+        # Provisioning Profile
+        ##########################################
+
+        # Invoke fastlane sigh to get the app provisioned
+	#Default
+	    get_provisioning_profile(
+	    app_identifier: APPID,
+        	username: ENV['bamboo_FASTLANE_USER'],
+   	    team_id: ENV['bamboo_FASTLANE_TEAM_ID'],
+	    )
+	    QMI_TARGET = ENV['SIGH_NAME']
+
+	update_code_signing_settings(
+    	profile_name: QMI_TARGET, # Fill in the variable in which you've saved the name in the step before
+    	targets: "RideTracker",
+    	bundle_identifier: APPID, # Fill in the app ID of the target
+	)
+
+	update_project_provisioning(
+                build_configuration: "Release",
+		target_filter: "RideTracker"
+        )
+
+        get_provisioning_profile(
+    	    app_identifier: WATCHKITID,
+    	    username: ENV['bamboo_FASTLANE_USER'],
+   	        team_id: ENV['bamboo_FASTLANE_TEAM_ID'],
+	    )
+	    WATCHKITAPP_TARGET = ENV['SIGH_NAME']
+
+
+	update_code_signing_settings(
+    	profile_name: WATCHKITAPP_TARGET, # Fill in the variable in which you've saved the name in the step before
+    	targets: "WatchRideTracker",
+    	bundle_identifier: WATCHKITID, # Fill in the app ID of the target
+	)  
+	
+	update_project_provisioning(
+                build_configuration: "Release",
+		target_filter: "ChargingWatch"
+        )
+
+	    get_provisioning_profile(
+	        app_identifier: WATCHKITEXTID,
+        	username: ENV['bamboo_FASTLANE_USER'],
+   	        team_id: ENV['bamboo_FASTLANE_TEAM_ID'],
+	    )
+	    WATCHKITEXTENSION_TARGET = ENV['SIGH_NAME']
+	   
+	    update_code_signing_settings(
+    	profile_name: WATCHKITEXTENSION_TARGET, # Fill in the variable in which you've saved the name in the step before
+    	targets: "WatchRideTracker Extension",
+    	bundle_identifier: WATCHKITEXTID, # Fill in the app ID of the target
+	)
+	
+	update_project_provisioning(
+                build_configuration: "Release",
+		target_filter: "WatchRideTracker Extension"
+        )
+
+        ##########################################
+        # Swift Package Manager
+        ##########################################
+
+        # Resolve the Swift Package Manager dependencies
+        xcodebuild(
+                build: false,
+                xcargs: "-resolvePackageDependencies",
+        )
+
+        ##########################################
+        # Code sign and Build 
+        ##########################################
+
+        # Build the app
+        build_ios_app(
+                clean: true,
+                output_name: "BuildedApplication.ipa",
+                export_method: "enterprise",
+                configuration: "Release"
+        )
+
+    end
+end

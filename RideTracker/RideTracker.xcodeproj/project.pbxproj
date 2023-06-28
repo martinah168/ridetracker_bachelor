@@ -1,0 +1,920 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B20BBA82695B57C00700F1E /* CodeSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20BBA72695B57C00700F1E /* CodeSamples.swift */; };
+		5B3339BC2652F91C00D1E6A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE330F9262AFFA900FF16BD /* MapKit.framework */; };
+		5B3339BE2652FF7D00D1E6A0 /* MapboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3339BD2652FF7D00D1E6A0 /* MapboxView.swift */; };
+		5B3339C02652FFAA00D1E6A0 /* MapboxCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3339BF2652FFAA00D1E6A0 /* MapboxCoordinator.swift */; };
+		5B353A5826A040ED0061376C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B353A5726A040ED0061376C /* UserView.swift */; };
+		5B7015A926643B3C00D4A4AD /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7015A826643B3C00D4A4AD /* ViewModelPhone.swift */; };
+		5B7015AB266448B900D4A4AD /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7015AA266448B900D4A4AD /* WorkoutModel.swift */; };
+		5B7015AF26644CC600D4A4AD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7015AE26644CC600D4A4AD /* HealthKit.framework */; };
+		5B7015B2266642A800D4A4AD /* WatchSync in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7015B1266642A800D4A4AD /* WatchSync */; };
+		5B7015B82666885100D4A4AD /* WatchSync in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7015B72666885100D4A4AD /* WatchSync */; };
+		5B7015BA2666885800D4A4AD /* WatchSync in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7015B92666885800D4A4AD /* WatchSync */; };
+		5B7015BB266688BE00D4A4AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408FE2629C7D2000725EA /* User.swift */; };
+		5B7015BC266688E100D4A4AD /* WeatherCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F1F265D6EA600D5571A /* WeatherCore.swift */; };
+		5B7015BD266688E100D4A4AD /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3310F262CC07000FF16BD /* Weather.swift */; };
+		5B7015BE266688F800D4A4AD /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9DF81B264B24B00070F48A /* PersistanceManager.swift */; };
+		5B7015BF2666890200D4A4AD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B9DF818264AFE1F0070F48A /* Model.xcdatamodeld */; };
+		5B7015C02666891B00D4A4AD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE33113262CD11C00FF16BD /* NetworkService.swift */; };
+		5B8408DD262885E9000725EA /* RideTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408DC262885E9000725EA /* RideTrackerApp.swift */; };
+		5B8408DF262885E9000725EA /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408DE262885E9000725EA /* InfoView.swift */; };
+		5B8408E1262885EB000725EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8408E0262885EB000725EA /* Assets.xcassets */; };
+		5B8408E4262885EB000725EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8408E3262885EB000725EA /* Preview Assets.xcassets */; };
+		5B8408EF26288853000725EA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8408EE26288853000725EA /* HealthKit.framework */; };
+		5B8408F82629A1C6000725EA /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408F72629A1C6000725EA /* HealthKitSetupAssistant.swift */; };
+		5B8408FC2629C6DC000725EA /* HKBiologicalSex+StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408FB2629C6DC000725EA /* HKBiologicalSex+StringExtension.swift */; };
+		5B8408FF2629C7D2000725EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408FE2629C7D2000725EA /* User.swift */; };
+		5B8E76DA26A0928600487C2B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E76D926A0928600487C2B /* UserViewModel.swift */; };
+		5B9DF81A264AFE1F0070F48A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B9DF818264AFE1F0070F48A /* Model.xcdatamodeld */; };
+		5B9DF81C264B24B00070F48A /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9DF81B264B24B00070F48A /* PersistanceManager.swift */; };
+		5BA78F20265D6EA600D5571A /* WeatherCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F1F265D6EA600D5571A /* WeatherCore.swift */; };
+		5BA78F262664211D00D5571A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA78F252664211D00D5571A /* Assets.xcassets */; };
+		5BA78F2D2664211D00D5571A /* WatchRideTracker Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5BA78F2C2664211D00D5571A /* WatchRideTracker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BA78F322664211D00D5571A /* RideTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F312664211D00D5571A /* RideTrackerApp.swift */; };
+		5BA78F342664211D00D5571A /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F332664211D00D5571A /* WatchView.swift */; };
+		5BA78F362664211D00D5571A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F352664211D00D5571A /* NotificationController.swift */; };
+		5BA78F382664211D00D5571A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F372664211D00D5571A /* NotificationView.swift */; };
+		5BA78F3A2664211D00D5571A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F392664211D00D5571A /* ComplicationController.swift */; };
+		5BA78F3C2664211F00D5571A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA78F3B2664211F00D5571A /* Assets.xcassets */; };
+		5BA78F3F2664211F00D5571A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA78F3E2664211F00D5571A /* Preview Assets.xcassets */; };
+		5BA78F442664211F00D5571A /* WatchRideTracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BA78F232664211B00D5571A /* WatchRideTracker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BA78F4D2664256200D5571A /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408F72629A1C6000725EA /* HealthKitSetupAssistant.swift */; };
+		5BA78F4E2664256200D5571A /* HKBiologicalSex+StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8408FB2629C6DC000725EA /* HKBiologicalSex+StringExtension.swift */; };
+		5BA78F50266425B700D5571A /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA78F4F266425B700D5571A /* ViewModelWatch.swift */; };
+		5BC6CCC22647157C00D21AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6CCC12647157C00D21AE1 /* AppDelegate.swift */; };
+		5BCDE4812697408F0057BBBB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCDE4802697408F0057BBBB /* DetailViewModel.swift */; };
+		5BE330FE262B06FD00FF16BD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE330FD262B06FD00FF16BD /* LocationManager.swift */; };
+		5BE33103262B0EF600FF16BD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE33102262B0EF600FF16BD /* MapView.swift */; };
+		5BE33108262B10D300FF16BD /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE33107262B10D300FF16BD /* MapCoordinator.swift */; };
+		5BE33110262CC07000FF16BD /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3310F262CC07000FF16BD /* Weather.swift */; };
+		5BE33114262CD11C00FF16BD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE33113262CD11C00FF16BD /* NetworkService.swift */; };
+		5BE33117262DEAD800FF16BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE33116262DEAD800FF16BD /* DetailView.swift */; };
+		5BE3311C262F13B800FF16BD /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3311B262F13B800FF16BD /* InfoViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BA78F2E2664211D00D5571A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B8408D1262885E9000725EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA78F2B2664211D00D5571A;
+			remoteInfo = "WatchRideTracker Extension";
+		};
+		5BA78F422664211F00D5571A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B8408D1262885E9000725EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA78F222664211B00D5571A;
+			remoteInfo = WatchRideTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BA78F482664211F00D5571A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BA78F2D2664211D00D5571A /* WatchRideTracker Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA78F4C2664211F00D5571A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5BA78F442664211F00D5571A /* WatchRideTracker.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B20BBA72695B57C00700F1E /* CodeSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSamples.swift; sourceTree = "<group>"; };
+		5B3339B42652F55E00D1E6A0 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../../Downloads/mapbox-ios-sdk-dynamic-with-events/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
+		5B3339B82652F66700D1E6A0 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = "../../../Downloads/mapbox-ios-sdk-dynamic-with-events/dynamic/MapboxMobileEvents.framework"; sourceTree = "<group>"; };
+		5B3339BD2652FF7D00D1E6A0 /* MapboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxView.swift; sourceTree = "<group>"; };
+		5B3339BF2652FFAA00D1E6A0 /* MapboxCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxCoordinator.swift; sourceTree = "<group>"; };
+		5B353A5726A040ED0061376C /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		5B7015A826643B3C00D4A4AD /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
+		5B7015AA266448B900D4A4AD /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		5B7015AD26644CC500D4A4AD /* WatchRideTracker Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchRideTracker Extension.entitlements"; sourceTree = "<group>"; };
+		5B7015AE26644CC600D4A4AD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		5B8408D9262885E9000725EA /* RideTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8408DC262885E9000725EA /* RideTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTrackerApp.swift; sourceTree = "<group>"; };
+		5B8408DE262885E9000725EA /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		5B8408E0262885EB000725EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B8408E3262885EB000725EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B8408E5262885EB000725EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B8408EC26288853000725EA /* RideTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideTracker.entitlements; sourceTree = "<group>"; };
+		5B8408EE26288853000725EA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		5B8408F72629A1C6000725EA /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		5B8408FB2629C6DC000725EA /* HKBiologicalSex+StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKBiologicalSex+StringExtension.swift"; sourceTree = "<group>"; };
+		5B8408FE2629C7D2000725EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5B8E76D926A0928600487C2B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		5B9DF819264AFE1F0070F48A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		5B9DF81B264B24B00070F48A /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		5BA78F1F265D6EA600D5571A /* WeatherCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCore.swift; sourceTree = "<group>"; };
+		5BA78F232664211B00D5571A /* WatchRideTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchRideTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA78F252664211D00D5571A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BA78F272664211D00D5571A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA78F2C2664211D00D5571A /* WatchRideTracker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchRideTracker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA78F312664211D00D5571A /* RideTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTrackerApp.swift; sourceTree = "<group>"; };
+		5BA78F332664211D00D5571A /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
+		5BA78F352664211D00D5571A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5BA78F372664211D00D5571A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		5BA78F392664211D00D5571A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5BA78F3B2664211F00D5571A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BA78F3E2664211F00D5571A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BA78F402664211F00D5571A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA78F412664211F00D5571A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5BA78F4F266425B700D5571A /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+		5BC6CCC12647157C00D21AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BCDE4802697408F0057BBBB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		5BE330F9262AFFA900FF16BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5BE330FD262B06FD00FF16BD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5BE33102262B0EF600FF16BD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5BE33107262B10D300FF16BD /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		5BE3310F262CC07000FF16BD /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		5BE33113262CD11C00FF16BD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5BE33116262DEAD800FF16BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5BE3311B262F13B800FF16BD /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B8408D6262885E9000725EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8408EF26288853000725EA /* HealthKit.framework in Frameworks */,
+				5B7015B2266642A800D4A4AD /* WatchSync in Frameworks */,
+				5B3339BC2652F91C00D1E6A0 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA78F292664211D00D5571A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7015AF26644CC600D4A4AD /* HealthKit.framework in Frameworks */,
+				5B7015B82666885100D4A4AD /* WatchSync in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5114314C9EE4A8EAB3E0322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7015BA2666885800D4A4AD /* WatchSync in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B8408D0262885E9000725EA = {
+			isa = PBXGroup;
+			children = (
+				5B7015A826643B3C00D4A4AD /* ViewModelPhone.swift */,
+				5B8408DB262885E9000725EA /* RideTracker */,
+				5BA78F242664211B00D5571A /* WatchRideTracker */,
+				5BA78F302664211D00D5571A /* WatchRideTracker Extension */,
+				5B8408DA262885E9000725EA /* Products */,
+				5B8408ED26288853000725EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B8408DA262885E9000725EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B8408D9262885E9000725EA /* RideTracker.app */,
+				5BA78F232664211B00D5571A /* WatchRideTracker.app */,
+				5BA78F2C2664211D00D5571A /* WatchRideTracker Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B8408DB262885E9000725EA /* RideTracker */ = {
+			isa = PBXGroup;
+			children = (
+				5B9DF817264AFDFA0070F48A /* CoreData */,
+				5BE3310E262CBF0200FF16BD /* WeatherData */,
+				5BE3311A262F138D00FF16BD /* Models */,
+				5BE33106262B109B00FF16BD /* Coordinators */,
+				5BE33101262B0EC000FF16BD /* Views */,
+				5BE330FC262B06D700FF16BD /* LocationData */,
+				5BE330FB262B06C600FF16BD /* HealthKitData */,
+				5B8408DC262885E9000725EA /* RideTrackerApp.swift */,
+				5B8408EC26288853000725EA /* RideTracker.entitlements */,
+				5B8408E0262885EB000725EA /* Assets.xcassets */,
+				5B8408E5262885EB000725EA /* Info.plist */,
+				5B8408E2262885EB000725EA /* Preview Content */,
+				5BC6CCC12647157C00D21AE1 /* AppDelegate.swift */,
+			);
+			path = RideTracker;
+			sourceTree = "<group>";
+		};
+		5B8408E2262885EB000725EA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B8408E3262885EB000725EA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B8408ED26288853000725EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B7015AE26644CC600D4A4AD /* HealthKit.framework */,
+				5B3339B82652F66700D1E6A0 /* MapboxMobileEvents.framework */,
+				5B3339B42652F55E00D1E6A0 /* Mapbox.framework */,
+				5BE330F9262AFFA900FF16BD /* MapKit.framework */,
+				5B8408EE26288853000725EA /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B9DF817264AFDFA0070F48A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5B9DF818264AFE1F0070F48A /* Model.xcdatamodeld */,
+				5B9DF81B264B24B00070F48A /* PersistanceManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5BA78F242664211B00D5571A /* WatchRideTracker */ = {
+			isa = PBXGroup;
+			children = (
+				5BA78F252664211D00D5571A /* Assets.xcassets */,
+				5BA78F272664211D00D5571A /* Info.plist */,
+			);
+			path = WatchRideTracker;
+			sourceTree = "<group>";
+		};
+		5BA78F302664211D00D5571A /* WatchRideTracker Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B7015AD26644CC500D4A4AD /* WatchRideTracker Extension.entitlements */,
+				5BA78F312664211D00D5571A /* RideTrackerApp.swift */,
+				5BA78F332664211D00D5571A /* WatchView.swift */,
+				5BA78F352664211D00D5571A /* NotificationController.swift */,
+				5BA78F372664211D00D5571A /* NotificationView.swift */,
+				5BA78F392664211D00D5571A /* ComplicationController.swift */,
+				5BA78F3B2664211F00D5571A /* Assets.xcassets */,
+				5BA78F402664211F00D5571A /* Info.plist */,
+				5BA78F412664211F00D5571A /* PushNotificationPayload.apns */,
+				5BA78F3D2664211F00D5571A /* Preview Content */,
+				5BA78F4F266425B700D5571A /* ViewModelWatch.swift */,
+				5B7015AA266448B900D4A4AD /* WorkoutModel.swift */,
+			);
+			path = "WatchRideTracker Extension";
+			sourceTree = "<group>";
+		};
+		5BA78F3D2664211F00D5571A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5BA78F3E2664211F00D5571A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5BE330FB262B06C600FF16BD /* HealthKitData */ = {
+			isa = PBXGroup;
+			children = (
+				5B8408F72629A1C6000725EA /* HealthKitSetupAssistant.swift */,
+				5B8408FB2629C6DC000725EA /* HKBiologicalSex+StringExtension.swift */,
+			);
+			path = HealthKitData;
+			sourceTree = "<group>";
+		};
+		5BE330FC262B06D700FF16BD /* LocationData */ = {
+			isa = PBXGroup;
+			children = (
+				5BE330FD262B06FD00FF16BD /* LocationManager.swift */,
+			);
+			path = LocationData;
+			sourceTree = "<group>";
+		};
+		5BE33101262B0EC000FF16BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BE33102262B0EF600FF16BD /* MapView.swift */,
+				5BE33116262DEAD800FF16BD /* DetailView.swift */,
+				5B8408DE262885E9000725EA /* InfoView.swift */,
+				5B3339BD2652FF7D00D1E6A0 /* MapboxView.swift */,
+				5B353A5726A040ED0061376C /* UserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BE33106262B109B00FF16BD /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BE33107262B10D300FF16BD /* MapCoordinator.swift */,
+				5B3339BF2652FFAA00D1E6A0 /* MapboxCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BE3310E262CBF0200FF16BD /* WeatherData */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3310F262CC07000FF16BD /* Weather.swift */,
+				5BE33113262CD11C00FF16BD /* NetworkService.swift */,
+			);
+			path = WeatherData;
+			sourceTree = "<group>";
+		};
+		5BE3311A262F138D00FF16BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B8408FE2629C7D2000725EA /* User.swift */,
+				5BE3311B262F13B800FF16BD /* InfoViewModel.swift */,
+				5BA78F1F265D6EA600D5571A /* WeatherCore.swift */,
+				5B20BBA72695B57C00700F1E /* CodeSamples.swift */,
+				5BCDE4802697408F0057BBBB /* DetailViewModel.swift */,
+				5B8E76D926A0928600487C2B /* UserViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B8408D8262885E9000725EA /* RideTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8408E8262885EB000725EA /* Build configuration list for PBXNativeTarget "RideTracker" */;
+			buildPhases = (
+				5B8408D5262885E9000725EA /* Sources */,
+				5B8408D6262885E9000725EA /* Frameworks */,
+				5B8408D7262885E9000725EA /* Resources */,
+				5BA78F4C2664211F00D5571A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BA78F432664211F00D5571A /* PBXTargetDependency */,
+			);
+			name = RideTracker;
+			packageProductDependencies = (
+				5B7015B1266642A800D4A4AD /* WatchSync */,
+			);
+			productName = RideTracker;
+			productReference = 5B8408D9262885E9000725EA /* RideTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BA78F222664211B00D5571A /* WatchRideTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA78F492664211F00D5571A /* Build configuration list for PBXNativeTarget "WatchRideTracker" */;
+			buildPhases = (
+				5BA78F212664211B00D5571A /* Resources */,
+				5BA78F482664211F00D5571A /* Embed App Extensions */,
+				A5114314C9EE4A8EAB3E0322 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BA78F2F2664211D00D5571A /* PBXTargetDependency */,
+			);
+			name = WatchRideTracker;
+			packageProductDependencies = (
+				5B7015B92666885800D4A4AD /* WatchSync */,
+			);
+			productName = WatchRideTracker;
+			productReference = 5BA78F232664211B00D5571A /* WatchRideTracker.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5BA78F2B2664211D00D5571A /* WatchRideTracker Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA78F452664211F00D5571A /* Build configuration list for PBXNativeTarget "WatchRideTracker Extension" */;
+			buildPhases = (
+				5BA78F282664211D00D5571A /* Sources */,
+				5BA78F292664211D00D5571A /* Frameworks */,
+				5BA78F2A2664211D00D5571A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchRideTracker Extension";
+			packageProductDependencies = (
+				5B7015B72666885100D4A4AD /* WatchSync */,
+			);
+			productName = "WatchRideTracker Extension";
+			productReference = 5BA78F2C2664211D00D5571A /* WatchRideTracker Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B8408D1262885E9000725EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					5B8408D8262885E9000725EA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					5BA78F222664211B00D5571A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					5BA78F2B2664211D00D5571A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 5B8408D4262885E9000725EA /* Build configuration list for PBXProject "RideTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B8408D0262885E9000725EA;
+			packageReferences = (
+				5B7015B0266642A800D4A4AD /* XCRemoteSwiftPackageReference "WatchSync" */,
+			);
+			productRefGroup = 5B8408DA262885E9000725EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B8408D8262885E9000725EA /* RideTracker */,
+				5BA78F222664211B00D5571A /* WatchRideTracker */,
+				5BA78F2B2664211D00D5571A /* WatchRideTracker Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B8408D7262885E9000725EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8408E4262885EB000725EA /* Preview Assets.xcassets in Resources */,
+				5B8408E1262885EB000725EA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA78F212664211B00D5571A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA78F262664211D00D5571A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA78F2A2664211D00D5571A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA78F3F2664211F00D5571A /* Preview Assets.xcassets in Resources */,
+				5BA78F3C2664211F00D5571A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B8408D5262885E9000725EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE3311C262F13B800FF16BD /* InfoViewModel.swift in Sources */,
+				5BE33114262CD11C00FF16BD /* NetworkService.swift in Sources */,
+				5B9DF81A264AFE1F0070F48A /* Model.xcdatamodeld in Sources */,
+				5BE33103262B0EF600FF16BD /* MapView.swift in Sources */,
+				5BC6CCC22647157C00D21AE1 /* AppDelegate.swift in Sources */,
+				5B7015A926643B3C00D4A4AD /* ViewModelPhone.swift in Sources */,
+				5BE33117262DEAD800FF16BD /* DetailView.swift in Sources */,
+				5BE33108262B10D300FF16BD /* MapCoordinator.swift in Sources */,
+				5B8408F82629A1C6000725EA /* HealthKitSetupAssistant.swift in Sources */,
+				5B3339C02652FFAA00D1E6A0 /* MapboxCoordinator.swift in Sources */,
+				5B8E76DA26A0928600487C2B /* UserViewModel.swift in Sources */,
+				5BE33110262CC07000FF16BD /* Weather.swift in Sources */,
+				5B353A5826A040ED0061376C /* UserView.swift in Sources */,
+				5B8408FF2629C7D2000725EA /* User.swift in Sources */,
+				5B20BBA82695B57C00700F1E /* CodeSamples.swift in Sources */,
+				5BE330FE262B06FD00FF16BD /* LocationManager.swift in Sources */,
+				5B8408DF262885E9000725EA /* InfoView.swift in Sources */,
+				5B8408DD262885E9000725EA /* RideTrackerApp.swift in Sources */,
+				5BCDE4812697408F0057BBBB /* DetailViewModel.swift in Sources */,
+				5B3339BE2652FF7D00D1E6A0 /* MapboxView.swift in Sources */,
+				5B8408FC2629C6DC000725EA /* HKBiologicalSex+StringExtension.swift in Sources */,
+				5B9DF81C264B24B00070F48A /* PersistanceManager.swift in Sources */,
+				5BA78F20265D6EA600D5571A /* WeatherCore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA78F282664211D00D5571A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA78F362664211D00D5571A /* NotificationController.swift in Sources */,
+				5B7015BF2666890200D4A4AD /* Model.xcdatamodeld in Sources */,
+				5BA78F50266425B700D5571A /* ViewModelWatch.swift in Sources */,
+				5BA78F342664211D00D5571A /* WatchView.swift in Sources */,
+				5BA78F3A2664211D00D5571A /* ComplicationController.swift in Sources */,
+				5B7015BC266688E100D4A4AD /* WeatherCore.swift in Sources */,
+				5BA78F4D2664256200D5571A /* HealthKitSetupAssistant.swift in Sources */,
+				5BA78F4E2664256200D5571A /* HKBiologicalSex+StringExtension.swift in Sources */,
+				5B7015BD266688E100D4A4AD /* Weather.swift in Sources */,
+				5B7015C02666891B00D4A4AD /* NetworkService.swift in Sources */,
+				5BA78F322664211D00D5571A /* RideTrackerApp.swift in Sources */,
+				5B7015AB266448B900D4A4AD /* WorkoutModel.swift in Sources */,
+				5BA78F382664211D00D5571A /* NotificationView.swift in Sources */,
+				5B7015BB266688BE00D4A4AD /* User.swift in Sources */,
+				5B7015BE266688F800D4A4AD /* PersistanceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BA78F2F2664211D00D5571A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA78F2B2664211D00D5571A /* WatchRideTracker Extension */;
+			targetProxy = 5BA78F2E2664211D00D5571A /* PBXContainerItemProxy */;
+		};
+		5BA78F432664211F00D5571A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA78F222664211B00D5571A /* WatchRideTracker */;
+			targetProxy = 5BA78F422664211F00D5571A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5B8408E6262885EB000725EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B8408E7262885EB000725EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B8408E9262885EB000725EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RideTracker/RideTracker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"RideTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RideTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.health.university.RideTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "BA Martina Hinz - RideTracker";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		5B8408EA262885EB000725EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RideTracker/RideTracker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"RideTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RideTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.health.university.RideTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "BA Martina Hinz - RideTracker";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+		5BA78F462664211F00D5571A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchRideTracker Extension/WatchRideTracker Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchRideTracker Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchRideTracker Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.health.university.RideTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "BA Martina Hinz - RideTracker WatchKitExtension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		5BA78F472664211F00D5571A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchRideTracker Extension/WatchRideTracker Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchRideTracker Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchRideTracker Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.health.university.RideTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "BA Martina Hinz - RideTracker WatchKitExtension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		5BA78F4A2664211F00D5571A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				IBSC_MODULE = WatchRideTracker_Extension;
+				INFOPLIST_FILE = WatchRideTracker/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.health.university.RideTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "BA Martina Hinz - RideTracker WatchKit";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		5BA78F4B2664211F00D5571A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7PLLZ436SG;
+				IBSC_MODULE = WatchRideTracker_Extension;
+				INFOPLIST_FILE = WatchRideTracker/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tum.in.health.university.RideTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "BA Martina Hinz - RideTracker WatchKit";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B8408D4262885E9000725EA /* Build configuration list for PBXProject "RideTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8408E6262885EB000725EA /* Debug */,
+				5B8408E7262885EB000725EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8408E8262885EB000725EA /* Build configuration list for PBXNativeTarget "RideTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8408E9262885EB000725EA /* Debug */,
+				5B8408EA262885EB000725EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA78F452664211F00D5571A /* Build configuration list for PBXNativeTarget "WatchRideTracker Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA78F462664211F00D5571A /* Debug */,
+				5BA78F472664211F00D5571A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA78F492664211F00D5571A /* Build configuration list for PBXNativeTarget "WatchRideTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA78F4A2664211F00D5571A /* Debug */,
+				5BA78F4B2664211F00D5571A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B7015B0266642A800D4A4AD /* XCRemoteSwiftPackageReference "WatchSync" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cgaaf/WatchSync.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B7015B1266642A800D4A4AD /* WatchSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B7015B0266642A800D4A4AD /* XCRemoteSwiftPackageReference "WatchSync" */;
+			productName = WatchSync;
+		};
+		5B7015B72666885100D4A4AD /* WatchSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B7015B0266642A800D4A4AD /* XCRemoteSwiftPackageReference "WatchSync" */;
+			productName = WatchSync;
+		};
+		5B7015B92666885800D4A4AD /* WatchSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B7015B0266642A800D4A4AD /* XCRemoteSwiftPackageReference "WatchSync" */;
+			productName = WatchSync;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5B9DF818264AFE1F0070F48A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B9DF819264AFE1F0070F48A /* Model.xcdatamodel */,
+			);
+			currentVersion = 5B9DF819264AFE1F0070F48A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5B8408D1262885E9000725EA /* Project object */;
+}
